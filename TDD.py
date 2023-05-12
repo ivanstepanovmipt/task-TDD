@@ -15,6 +15,10 @@ class MyTestCase(unittest.TestCase):
     def test_min(self):
         self.assertEqual(order(['Book0', 'Book1', 'Book2', 'Book2'], store), 5)
 
+    def test_max(self):
+        self.assertEqual(order(['Book0', 'Book1', 'Book2', 'Book2'], store), 5)
+
+
 
 class Book:
     """book"""
