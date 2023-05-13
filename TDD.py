@@ -9,14 +9,14 @@ import unittest
 class MyTestCase(unittest.TestCase):
     """verification tests"""
 
-    def test_add(self):
+    def test_1(self):
         self.assertEqual(order(['Book0', 'Book1', 'Book2', 'Book2'], store), 5)
 
-    def test_min(self):
-        self.assertEqual(order(['Book0', 'Book1', 'Book2', 'Book2'], store), 5)
+    def test_2(self):
+        self.assertEqual(order(['Book3', 'Book4'], store), 7)
 
-    def test_max(self):
-        self.assertEqual(order(['Book0', 'Book1', 'Book2', 'Book2'], store), 5)
+    def test_3(self):
+        self.assertEqual(order(['Book6', 'Book7'], store), 13)
 
 
 
