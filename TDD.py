@@ -53,7 +53,10 @@ def order(shopping_list, book_l):
         else:
             print('the book is not in the store')
 
-    return purchase_price
+    if(5 >= len(shopping_list) >= 2):
+        return 0.95 * purchase_price
+    else:
+        return purchase_price
 
 
 def create_store():
