@@ -18,6 +18,9 @@ class MyTestCase(unittest.TestCase):
     def test_3(self):
         self.assertEqual(order(['Book6'], store), 6)
 
+    def test_discount_5(self):
+        self.assertEqual(order(['Book8', 'Book12'], store), 19)
+
 
 
 class Book:
