@@ -38,5 +38,6 @@ jobs:
     - name: Test with pytes
       run: |
         pip install coverage
-        coverage run -m unittest TDD.py
+        coverage run TDD.py
+        coverage report -m
 
