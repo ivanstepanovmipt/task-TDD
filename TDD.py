@@ -13,7 +13,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(order(['Book0'], store), 0)
 
     def test_2(self):
-        self.assertEqual(order(['Book2'], store), 2)
+        self.assertEqual(order(['Book3'], store), 3)
 
     def test_3(self):
         self.assertEqual(order(['Book6'], store), 6)
