@@ -56,7 +56,8 @@ def order(shopping_list, book_l):
         if price >= 0:
             purchase_price = purchase_price + price
         else:
-            purchase_price = 0  
+            purchase_price = 0
+  
     if (len(shopping_list) >= 5):
         return 0.9 * purchase_price
     if (5 > len(shopping_list) >= 2):
