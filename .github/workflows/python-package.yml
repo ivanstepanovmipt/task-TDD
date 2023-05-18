@@ -40,4 +40,10 @@ jobs:
         pip install coverage
         coverage run TDD.py
         coverage report -m
+    - name: branch coverage
+      run: |
+        pip install coverage
+        coverage run --branch TDD.py
+        coverage report -m
+        
 
