@@ -10,7 +10,7 @@ class MyTestCase(unittest.TestCase):
     """verification tests"""
 
     def test_1(self):
-        self.assertEqual(order(['Book0'], store), 0)
+        self.assertEqual(order(['Book1'], store), 1)
 
     def test_2(self):
         self.assertEqual(order(['Book3'], store), 3)
