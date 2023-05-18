@@ -18,6 +18,9 @@ class MyTestCase(unittest.TestCase):
     def test_3(self):
         self.assertEqual(order(['Book6'], store), 6)
 
+    def test_no_book(self):
+        self.assertEqual(order(['Book5', 'Book5', 'Book5', 'Book5'], store), 6)
+
     def test_discount_5(self):
         self.assertEqual(order(['Book8', 'Book12'], store), 19)
 
@@ -52,6 +55,8 @@ def order(shopping_list, book_l):
         price = buy_book(book_l, i)
         if price >= 0:
             purchase_price = purchase_price + price
+        else:
+            purchase_price = 0  
     if (len(shopping_list) >= 5):
         return 0.9 * purchase_price
     if (5 > len(shopping_list) >= 2):
@@ -68,7 +73,7 @@ def create_store():
         price_book = i
         genre_book = random.choice(['novel', 'poems', 'drama'])
         book_list.append(Book(title_book, price_book, genre_book))
-    return book_list + book_list + book_list + book_list
+    return book_list + book_list + book_list
 
 
 if __name__ == "__main__":
