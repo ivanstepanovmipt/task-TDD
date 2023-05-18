@@ -4,6 +4,7 @@ bookstore
 
 import random
 import unittest
+import cProfile
 
 
 class MyTestCase(unittest.TestCase):
@@ -57,7 +58,6 @@ def order(shopping_list, book_l):
             purchase_price = purchase_price + price
         else:
             purchase_price = 0
-  
     if (len(shopping_list) >= 5):
         return 0.9 * purchase_price
     if (5 > len(shopping_list) >= 2):
