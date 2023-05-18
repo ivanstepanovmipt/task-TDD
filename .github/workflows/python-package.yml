@@ -45,7 +45,7 @@ jobs:
         pip install coverage
         coverage run --branch TDD.py
         coverage report -m
-      - name: 
+    - name: Python profile
       run: |
         pip install cProfile
         python -m cProfile TDD.py
