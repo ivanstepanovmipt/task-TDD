@@ -28,7 +28,10 @@ class MyTestCase(unittest.TestCase):
     def test_discount_10(self):
         self.assertEqual(order(['Book9', 'Book11', 'Book10', 'Book17', 'Book13',], store), 54)
 
+    def test_function_coverage(self):
+        self.assertEqual(launch_buy_book * launch_order * launch_create_store , 1)
 
+        
 class Book:
     """book"""
 
@@ -40,6 +43,7 @@ class Book:
 
 def buy_book(book_l, name):
     """returns the price of the purchased book"""
+    launch_buy_book = 1
     price_book = -1
     for i in range(len(book_l)):
         if name == book_l[i].title:
@@ -51,6 +55,7 @@ def buy_book(book_l, name):
 
 def order(shopping_list, book_l):
     """returns the amount of books purchased"""
+    launch_order = 1
     purchase_price = 0
     for i in shopping_list:
         price = buy_book(book_l, i)
@@ -68,6 +73,7 @@ def order(shopping_list, book_l):
 
 def create_store():
     """returns the amount of books purchased"""
+    launch_create_store = 1
     book_list = []
     for i in range(50):
         title_book = "Book" + str(i)
@@ -78,4 +84,8 @@ def create_store():
 
 
 store = create_store()
+func = True
+launch_buy_book = 0
+launch_order = 0
+launch_create_store = 0
 unittest.main()
