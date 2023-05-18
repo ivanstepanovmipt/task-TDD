@@ -47,7 +47,6 @@ jobs:
         coverage report -m
     - name: Python profile
       run: |
-        python3 -m pip install
         python -m cProfile TDD.py
 
         
