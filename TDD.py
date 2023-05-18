@@ -31,7 +31,6 @@ class MyTestCase(unittest.TestCase):
      
 class Book:
     """book"""
-
     def __init__(self, title, price, genre):
         self.title = title
         self.price = price
