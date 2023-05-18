@@ -76,6 +76,5 @@ def create_store():
     return book_list + book_list + book_list
 
 
-if __name__ == "__main__":
-    store = create_store()
-    unittest.main()
+store = create_store()
+unittest.main()
